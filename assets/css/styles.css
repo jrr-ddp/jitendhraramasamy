@@ -1432,6 +1432,11 @@ body.dark-theme {
   position: relative;
 }
 
+.disabled {
+  pointer-events: none; /* Disables click */
+  opacity: 0.5; /* Makes it look disabled */
+  cursor: not-allowed;
+}
 .portfolio__container .swiper-wrapper {
   display: flex;
   align-items: stretch;
