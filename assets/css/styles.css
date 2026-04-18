@@ -1377,14 +1377,14 @@ body.light-theme .hero__glow {
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: pointer;
-  aspect-ratio: 16/10;
+  aspect-ratio: 4/3;
   background: var(--surface);
   border: 1px solid var(--border);
 }
 
 .project__card--featured {
   grid-column: 1 / -1;
-  aspect-ratio: 21/9;
+  aspect-ratio: 16/7;
 }
 
 .project__img {
@@ -1406,7 +1406,8 @@ body.light-theme .hero__glow {
   padding: var(--space-6);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  overflow: hidden;
   background: linear-gradient(
     to top,
     rgba(7, 11, 20, 0.95) 0%,
@@ -1414,6 +1415,21 @@ body.light-theme .hero__glow {
     transparent 100%
   );
   transition: var(--transition);
+}
+
+/* Top zone — always pinned to top of card */
+.project__top {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Bottom zone — always pinned to bottom of card */
+.project__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  min-height: 0;
 }
 
 .project__tag {
@@ -1425,7 +1441,6 @@ body.light-theme .hero__glow {
   border-radius: var(--radius-full);
   padding: 3px 12px;
   width: fit-content;
-  margin-bottom: var(--space-3);
 }
 
 .project__title {
@@ -1439,8 +1454,26 @@ body.light-theme .hero__glow {
   font-size: var(--fs-sm);
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: var(--space-4);
-  display: none;
   line-height: 1.6;
+  display: none;
+  max-height: 72px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+  padding-right: 4px;
+}
+
+.project__desc::-webkit-scrollbar {
+  width: 3px;
+}
+
+.project__desc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project__desc::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 99px;
 }
 
 .project__card:hover .project__desc {
