@@ -1,3 +1,9 @@
 {
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "chat.tools.terminal.autoApprove": {
+    "/^cmd /c python -c \"import pdfplumber; import json; pdf=pdfplumber\\.open\\(r'b:\\\\Personal\\\\CV\\\\Latest\\\\Jitendhra Ramasamy_Senior Developer-2025-1\\.pdf'\\); text=''\\.join\\(\\[p\\.extract_text\\(\\) or '' for p in pdf\\.pages\\]\\); print\\(text\\[:5000\\]\\)\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
 }

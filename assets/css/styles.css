@@ -986,20 +986,66 @@ body.light-theme .hero__glow {
   color: var(--success);
   border: 1px solid rgba(100, 255, 218, 0.3);
 }
+
+.skill__badge--master {
+  background: rgba(80, 240, 180, 0.15);
+  color: #50f0b4;
+  border: 1px solid rgba(80, 240, 180, 0.3);
+}
+
 .skill__badge--advanced {
   background: rgba(0, 198, 255, 0.12);
   color: var(--accent);
   border: 1px solid rgba(0, 198, 255, 0.3);
 }
-.skill__badge--intermediate {
+
+.skill__badge--proficient {
+  background: rgba(100, 200, 255, 0.12);
+  color: #64c8ff;
+  border: 1px solid rgba(100, 200, 255, 0.3);
+}
+
+.skill__badge--strong {
+  background: rgba(120, 200, 255, 0.12);
+  color: #78c8ff;
+  border: 1px solid rgba(120, 200, 255, 0.3);
+}
+
+.skill__badge--competent {
   background: rgba(145, 94, 255, 0.12);
   color: var(--accent-2);
   border: 1px solid rgba(145, 94, 255, 0.3);
 }
+
+.skill__badge--capable {
+  background: rgba(255, 200, 60, 0.12);
+  color: #ffc83c;
+  border: 1px solid rgba(255, 200, 60, 0.3);
+}
+
+.skill__badge--intermediate {
+  background: rgba(255, 150, 60, 0.12);
+  color: #ff963c;
+  border: 1px solid rgba(255, 150, 60, 0.3);
+}
+
+.skill__badge--developing {
+  background: rgba(255, 120, 80, 0.12);
+  color: #ff7850;
+  border: 1px solid rgba(255, 120, 80, 0.3);
+}
+
 .skill__badge--beginner {
   background: rgba(255, 107, 107, 0.1);
   color: var(--danger);
   border: 1px solid rgba(255, 107, 107, 0.25);
+}
+
+.skill__badge--top {
+  background: rgba(255, 200, 60, 0.15);
+  color: #ffc83c;
+  border: 1px solid rgba(255, 200, 60, 0.35);
+  font-weight: 600;
 }
 
 /* Skill bar track */
