@@ -163,18 +163,45 @@ if (themeButton) {
 /* ==================== SCROLL REVEAL ==================== */
 const sr = ScrollReveal({
   origin:   'top',
-  distance: '60px',
-  duration: 2500,
-  delay:    400,
+  distance: '80px',
+  duration: 2000,
+  delay:    300,
+  reset:    false,
 });
 
-sr.reveal('.hero__content, .projects__grid, .footer__container');
-sr.reveal('.hero__visual',          { delay: 600, origin: 'bottom' });
-sr.reveal('.about__photo-col',      { origin: 'left' });
-sr.reveal('.about__content',        { origin: 'right' });
-sr.reveal('.skills__tabs',          { origin: 'bottom' });
-sr.reveal('.skills__panel.active',  { origin: 'bottom', delay: 500 });
-sr.reveal('.qual__tabs',            { origin: 'bottom' });
-sr.reveal('.service__card',         { interval: 100, origin: 'bottom' });
-sr.reveal('.testimonial__card',     { interval: 100, origin: 'bottom' });
-sr.reveal('.contact__info, .contact__form', { origin: 'bottom', interval: 100 });
+// Hero Section - Split reveal
+sr.reveal('.hero__content',         { origin: 'left', distance: '100px' });
+sr.reveal('.hero__visual',          { origin: 'right', distance: '100px', delay: 400 });
+
+// Section Headers - Fade up
+sr.reveal('.section__header',      { origin: 'bottom', distance: '30px', opacity: 0 });
+
+// About Section - Side reveals
+sr.reveal('.about__photo-col',     { origin: 'left', distance: '80px' });
+sr.reveal('.about__content',       { origin: 'right', distance: '80px', delay: 200 });
+
+// Skills Section - Bottom up with stagger
+sr.reveal('.skills__tabs',         { origin: 'bottom', distance: '40px' });
+sr.reveal('.skills__panel.active', { origin: 'bottom', delay: 400, distance: '30px' });
+
+// Qualification Section - Left slide with stagger
+sr.reveal('.qual__tabs',           { origin: 'bottom', distance: '40px' });
+sr.reveal('.qual__panel.active',  { origin: 'bottom', delay: 200 });
+sr.reveal('.timeline__item',      { origin: 'left', distance: '60px', interval: 120 });
+
+// Services Section - Bottom up with stagger
+sr.reveal('.service__card',       { origin: 'bottom', distance: '50px', interval: 100 });
+
+// Portfolio/Projects Section - Scale up effect
+sr.reveal('.projects__grid',      { origin: 'bottom', distance: '40px' });
+sr.reveal('.project__card',       { origin: 'bottom', distance: '30px', interval: 120, scale: 0.95 });
+
+// Testimonials Section - Right slide with stagger
+sr.reveal('.testimonial__card',   { origin: 'right', distance: '50px', interval: 120 });
+
+// Contact Section - Split reveal
+sr.reveal('.contact__info',       { origin: 'left', distance: '60px' });
+sr.reveal('.contact__form',       { origin: 'right', distance: '60px', delay: 200 });
+
+// Footer
+sr.reveal('.footer__container',   { origin: 'bottom', distance: '30px', opacity: 0 });
